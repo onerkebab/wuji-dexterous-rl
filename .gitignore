@@ -1,0 +1,35 @@
+# Root-anchored, no trailing slash: matches a directory OR a symlink (worktrees symlink these),
+# and never matches package folders such as wuji_cap/data/.
+/data
+/models
+/checkpoints
+/.venv
+results/**/*.mp4
+docs/forMe.md
+mano_v1_2/
+__pycache__/
+.pytest_cache/
+
+# Local documentation and workspace configuration.
+*.[mM][dD]
+!/README.md
+.agents/
+.codex/
+.claude/
+.cursor/
+.aider*
+.env
+.env.*
+.vscode/
+.idea/
+
+# Generated experiment outputs and build products.
+/results/*
+!/results/20261001-b5-placement/
+/results/20261001-b5-placement/*
+!/results/20261001-b5-placement/default_regression_fixture.json
+/dist
+/build
+*.egg-info/
+*.py[cod]
+.ruff_cache/
